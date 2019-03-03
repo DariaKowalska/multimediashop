@@ -4,229 +4,70 @@ public class Main {
     public static void main(String[] args) {
         Multimediashop multimediashop = new Multimediashop();
 
-
+        multimediashop.addBook(new BookBuilder()
+                .authorFirstName("Carol")
+                .authorLastName("Lewis")
+                .title("Lew, czarownica i stara szafa")
+                .build());
 
         multimediashop.addBook(new BookBuilder()
-
-
-
-                .authorFirstName("Carol")//
-
-
-
-                .authorLastName("Lewis")//
-
-
-
-                .title("Lew, czarownica i stara szafa")//
-
-
-
+                .authorFirstName("Lewis")
+                .authorLastName("Carol")
+                .title("Alicja w Krainie Czarów")
                 .build());
 
-
-
-        library.addBook(new BookBuilder()//
-
-
-
-                .authorFirstName("Lewis")//
-
-
-
-                .authorLastName("Carol")//
-
-
-
-                .title("Alicja w Krainie Czarów")//
-
-
-
+        multimediashop.addBook(new BookBuilder()
+                .authorFirstName("Xueqin")
+                .authorLastName("Cao")
+                .title("Sen czerwonego pawilonu")
                 .build());
 
-
-
-        library.addBook(new BookBuilder()//
-
-
-
-                .authorFirstName("Xueqin")//
-
-
-
-                .authorLastName("Cao")//
-
-
-
-                .title("Sen czerwonego pawilonu")//
-
-
-
+        multimediashop.addBook(new BookBuilder()
+                .authorFirstName("Agatha")
+                .authorLastName("Christie")
+                .title("I nie było już nikogo")
                 .build());
 
-
-
-        library.addBook(new BookBuilder()//
-
-
-
-                .authorFirstName("Agatha")//
-
-
-
-                .authorLastName("Christie")//
-
-
-
-                .title("I nie było już nikogo")//
-
-
-
+        multimediashop.addBook(new BookBuilder()
+                .authorFirstName("John")
+                .authorLastName("Tolkien")
+                .title("Hobbit, czyli tam i z powrotem")
                 .build());
 
-
-
-        library.addBook(new BookBuilder()//
-
-
-
-                .authorFirstName("John")//
-
-
-
-                .authorLastName("Tolkien")//
-
-
-
-                .title("Hobbit, czyli tam i z powrotem")//
-
-
-
+        multimediashop.addBook(new BookBuilder()
+                .authorFirstName("Joanne")
+                .authorLastName("Rowling")
+                .title("Harry Potter i kamień filozoficzny")
                 .build());
 
-
-
-        library.addBook(new BookBuilder()//
-
-
-
-                .authorFirstName("Joanne")//
-
-
-
-                .authorLastName("Rowling")//
-
-
-
-                .title("Harry Potter i kamień filozoficzny")//
-
-
-
+        multimediashop.addBook(new BookBuilder()
+                .authorFirstName("Antoine")
+                .authorLastName("de Saint-Exupéry")
+                .title("Mały Książę")
                 .build());
 
-
-
-        library.addBook(new BookBuilder()//
-
-
-
-                .authorFirstName("Antoine")//
-
-
-
-                .authorLastName("de Saint-Exupéry")//
-
-
-
-                .title("Mały Książę")//
-
-
-
+        multimediashop.addBook(new BookBuilder()
+                .authorFirstName("John")
+                .authorLastName("Tolkien")
+                .title("Władca Pierścieni")
                 .build());
 
-
-
-        library.addBook(new BookBuilder()//
-
-
-
-                .authorFirstName("John")//
-
-
-
-                .authorLastName("Tolkien")//
-
-
-
-                .title("Władca Pierścieni")//
-
-
-
+        multimediashop.addBook(new BookBuilder()
+                .authorFirstName("Charles")
+                .authorLastName("Dickens")
+                .title("Opowieść o dwóch miastach")
                 .build());
 
-
-
-        library.addBook(new BookBuilder()//
-
-
-
-                .authorFirstName("Charles")//
-
-
-
-                .authorLastName("Dickens")//
-
-
-
-                .title("Opowieść o dwóch miastach")//
-
-
-
+        multimediashop.addBook(new BookBuilder()
+                .authorFirstName("Miguel")
+                .authorLastName("de Cervantes")
+                .title("Don Kichot")
                 .build());
 
-
-
-        library.addBook(new BookBuilder()//
-
-
-
-                .authorFirstName("Miguel")//
-
-
-
-                .authorLastName("de Cervantes")//
-
-
-
-                .title("Don Kichot")//
-
-
-
-                .build());
-
-
-
-        for (Book book : library.getBooks()) {
-
-
-
+        for (Book book : multimediashop.getBooks()) {
             System.out.println(book);
-
-
-
         }
-
-
-
-    }
-
-
-
-
-
-
-
-}
-
     }
 }
+
+
