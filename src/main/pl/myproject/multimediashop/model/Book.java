@@ -2,7 +2,7 @@ package pl.myproject.multimediashop.model;
 
 import java.util.Objects;
 
-public class Book {
+public abstract class Book {
     private Author author;
     private String title;
 
