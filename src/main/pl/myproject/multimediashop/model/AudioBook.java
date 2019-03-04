@@ -34,6 +34,8 @@ public class AudioBook extends Book {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("AudioBook{");
+        sb.append(", author=").append(author);
+        sb.append(", title='").append(title).append('\'');
         sb.append("format=").append(format);
         sb.append('}');
         return sb.toString();

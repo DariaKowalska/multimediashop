@@ -32,6 +32,9 @@ public class PaperBook extends Book {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("PaperBook{");
+
+        sb.append(", author=").append(author);
+        sb.append(", title='").append(title).append('\'');
         sb.append("cover=").append(cover);
         sb.append('}');
         return sb.toString();
