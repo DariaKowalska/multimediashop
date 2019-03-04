@@ -5,22 +5,21 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class PaperBookBuilderTest {
+public class AudioBookBuilderTest {
 
     @Test
-    public void shouldBuildPaperBookWhenPaperBookDetailsAreDefined(){
+    private void shouldBuildAudioBookWhenAudioBookDetailsAreDefined(){
         //given
         String authorFirstName = "Henryk";
         String authorLastName = "Sienkiewicz";
         String title = " W pustyni i w puszczy";
-        Cover cover = Cover.HARD;
-
+        Format format = Format.MP3;
         //when
-        PaperBook book = new PaperBookBuilder()
+        AudioBook book = new AudioBookBuilder()
                 .authorFirstName(authorFirstName)
                 .authorLastName(authorLastName)
                 .title(title)
-                .cover(cover)
+                .format(format)
                 .build();
         //then
         assertNotNull(book);
@@ -28,8 +27,6 @@ public class PaperBookBuilderTest {
         assertEquals(authorFirstName, book.getAuthor().getFirstName());
         assertEquals(authorLastName, book.getAuthor().getLastName());
         assertEquals(title, book.getTitle());
-        assertEquals(cover, book.getCover());
-
+        assertEquals(format, book.getFormat());
     }
-
 }

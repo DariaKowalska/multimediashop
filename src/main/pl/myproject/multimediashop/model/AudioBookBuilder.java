@@ -1,36 +1,42 @@
 package pl.myproject.multimediashop.model;
 
-public class AudioBookBuilder extends BookBuilder<AudioBook> {
+public class AudioBookBuilder {
     private Format format;
+    private String authorFirstName;
+    private String authorLastName;
+    private String title;
 
-    @Override
-    public BookBuilder authorFirstName(String authorFirstName) {
-         super.authorFirstName(authorFirstName);
-         return this;
-    }
-
-    @Override
-    public BookBuilder authorLastName(String authorLastName) {
-        super.authorLastName(authorLastName);
+    public AudioBookBuilder format(Format format){
+        this.format=format;
         return this;
     }
 
-    @Override
-    public BookBuilder title(String title) {
-         super.title(title);
-         return this;
+
+    public AudioBookBuilder authorFirstName(String authorFirstName) {
+        this.authorFirstName = authorFirstName;
+        return this;
     }
 
-    @Override
+    public AudioBookBuilder authorLastName(String authorLastName) {
+        this.authorLastName = authorLastName;
+        return this;
+    }
+
+
+    public AudioBookBuilder title(String title) {
+        this.title = title;
+        return this;
+    }
+
     public AudioBook build() {
-        AudioBook audioBook = new AudioBook();
+        AudioBook book = new AudioBook();
         Author author = new Author();
         author.setFirstName(authorFirstName);
         author.setLastName(authorLastName);
-        audioBook.setAuthor(author);
-        audioBook.setTitle(title);
-        audioBook.setFormat(format);
-        return audioBook;
+        book.setAuthor(author);
+        book.setTitle(title);
+        book.setFormat(format);
+        return book;
     }
 
 }
