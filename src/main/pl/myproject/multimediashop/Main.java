@@ -1,4 +1,8 @@
-package pl.myproject.multimediashop.model;
+package pl.myproject.multimediashop;
+
+import pl.myproject.multimediashop.model.Book;
+import pl.myproject.multimediashop.model.BookBuilder;
+import pl.myproject.multimediashop.model.Multimediashop;
 
 public class Main {
     public static void main(String[] args) {
