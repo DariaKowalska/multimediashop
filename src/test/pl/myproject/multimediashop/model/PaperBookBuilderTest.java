@@ -5,17 +5,18 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class BookBuilderTest {
+public class PaperBookBuilderTest {
 
     @Test
-    public void shouldBuildBookWhenBookDetailsAreDefined(){
+    public void shouldBuildPaperBookWhenPaperBookDetailsAreDefined(){
         //given
         String authorFirstName = "Henryk";
         String authorLastName = "Sienkiewicz";
         String title = " W pustyni i w puszczy";
+        Cover cover = Cover.HARD;
 
         //when
-        Book book = new BookBuilder()
+        Book book = new PaperBookBuilder()
                 .authorFirstName(authorFirstName)
                 .authorLastName(authorLastName)
                 .title(title)

@@ -1,17 +1,12 @@
 package pl.myproject.multimediashop.model;
 
-public class PaperBookBuilder extends BookBuilder<PaperBook>{
-    private Cover cover;
-
-    public PaperBookBuilder cover (Cover cover){
-        this.cover=cover;
-        return this;
-    }
+public class AudioBookBuilder extends BookBuilder<AudioBook> {
+    private Format format;
 
     @Override
     public BookBuilder authorFirstName(String authorFirstName) {
-        super.authorFirstName(authorFirstName);
-        return this;
+         super.authorFirstName(authorFirstName);
+         return this;
     }
 
     @Override
@@ -27,14 +22,15 @@ public class PaperBookBuilder extends BookBuilder<PaperBook>{
     }
 
     @Override
-    public PaperBook build() {
-        PaperBook paperBook = new PaperBook();
+    public AudioBook build() {
+        AudioBook audioBook = new AudioBook();
         Author author = new Author();
         author.setFirstName(authorFirstName);
         author.setLastName(authorLastName);
-        paperBook.setAuthor(author);
-        paperBook.setTitle(title);
-        paperBook.setCover(cover);
-        return paperBook;
+        audioBook.setAuthor(author);
+        audioBook.setTitle(title);
+        audioBook.setFormat(format);
+        return audioBook;
     }
+
 }
