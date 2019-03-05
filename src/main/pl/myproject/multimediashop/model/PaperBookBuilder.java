@@ -1,5 +1,7 @@
 package pl.myproject.multimediashop.model;
 
+import java.util.Optional;
+
 public class PaperBookBuilder {
     private Cover cover;
     private String authorFirstName;
@@ -36,6 +38,14 @@ public class PaperBookBuilder {
         book.setAuthor(author);
         book.setTitle(title);
         book.setCover(cover);
+        book.setCover(Optional
+        .ofNullable(cover)
+        .orElse(Cover.HARD));
+        /*if (cover !=null){
+            book.setCover(cover);
+        }else{
+            book.setCover(Cover.SOFT);
+        }*/
         return book;
     }
 }

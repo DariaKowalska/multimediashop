@@ -1,5 +1,7 @@
 package pl.myproject.multimediashop.model;
 
+import java.util.Optional;
+
 public class AudioBookBuilder {
     private Format format;
     private String authorFirstName;
@@ -36,6 +38,14 @@ public class AudioBookBuilder {
         book.setAuthor(author);
         book.setTitle(title);
         book.setFormat(format);
+        book.setFormat(Optional
+        .ofNullable(format)
+        .orElse(Format.MP3));
+        /*if (format !=null){
+            book.setFormat(format);
+        }else{
+            book.setFormat(Format.MP3);
+        }*/
         return book;
     }
 
