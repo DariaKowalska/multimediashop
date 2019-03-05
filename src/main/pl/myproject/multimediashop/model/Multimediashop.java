@@ -5,16 +5,16 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
-public class Multimediashop {
+public class Multimediashop<T extends Book> {
 
-    private List<Book> books;
-    public List<Book> getBooks(){
+    private List<T> books;
+    public List<T> getBooks(){
         return Collections.unmodifiableList(books);
     }
-    public void setBooks(List<Book> books) {
+    public void setBooks(List<T> books) {
         this.books=new LinkedList<>(books);
     }
-    public void addBook(Book book){
+    public void addBook(T book){
         if (books == null){
             books = new LinkedList<>();
         }

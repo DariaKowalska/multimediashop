@@ -2,12 +2,9 @@ package pl.myproject.multimediashop.model;
 
 import java.util.Objects;
 
-public class Book {
-    private Author author;
-    private String title;
-
-    Book() {
-    }
+public abstract class Book {
+    protected Author author;
+    protected String title;
 
     public Author getAuthor() {
         return author;

@@ -1,9 +1,9 @@
 package pl.myproject.multimediashop.model;
 
-public final class BookBuilder {
-    private String authorFirstName;
-    private String authorLastName;
-    private String title;
+public abstract class BookBuilder<BookClass extends Book> {
+    protected String authorFirstName;
+    protected String authorLastName;
+    protected String title;
 
     public BookBuilder authorFirstName(String authorFirstName) {
         this.authorFirstName = authorFirstName;
@@ -19,8 +19,8 @@ public final class BookBuilder {
         this.title = title;
         return this;
     }
-
-    public Book build() {
+public abstract BookClass build();
+    /*public Book build() {
         Book book = new Book();
         Author author = new Author();
         author.setFirstName(authorFirstName);
@@ -28,5 +28,5 @@ public final class BookBuilder {
         book.setAuthor(author);
         book.setTitle(title);
         return book;
-    }
+    }*/
 }
