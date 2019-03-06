@@ -2,11 +2,11 @@ package pl.myproject.multimediashop.model;
 
 import java.util.Objects;
 
-public class Author {
+public class Creator {
     private String firstName;
     private String lastName;
 
-    Author() {
+    Creator() {
     }
 
     public String getFirstName() {
@@ -29,9 +29,9 @@ public class Author {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Author author = (Author) o;
-        return Objects.equals(firstName, author.firstName) &&
-                Objects.equals(lastName, author.lastName);
+        Creator creator = (Creator) o;
+        return Objects.equals(firstName, creator.firstName) &&
+                Objects.equals(lastName, creator.lastName);
     }
 
     @Override
@@ -41,7 +41,7 @@ public class Author {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Author{");
+        final StringBuilder sb = new StringBuilder("Creator{");
         sb.append("firstName='").append(firstName).append('\'');
         sb.append(", lastName='").append(lastName).append('\'');
         sb.append('}');
