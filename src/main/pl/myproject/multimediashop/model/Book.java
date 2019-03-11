@@ -2,25 +2,18 @@ package pl.myproject.multimediashop.model;
 
 import java.util.Objects;
 
-public abstract class Book {
-    protected Author author;
-    protected String title;
+public abstract class Book extends Medium{
+    protected Creator author;
 
-    public Author getAuthor() {
+
+    public Creator getAuthor() {
         return author;
     }
 
-    public void setAuthor(Author author) {
+    public void setAuthor(Creator author) {
         this.author = author;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
     @Override
     public boolean equals(Object o) {

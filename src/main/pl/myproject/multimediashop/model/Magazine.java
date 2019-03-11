@@ -2,21 +2,20 @@ package pl.myproject.multimediashop.model;
 
 import java.util.Objects;
 
-public class PaperBook extends Book implements PaperMedium {
-    PaperBook() {
-    }
+public class Magazine extends Medium implements PaperMedium {
 
-    private Cover cover;
+    private int number;
     private int pageCount;
 
-    public Cover getCover() {
-
-        return cover;
+    Magazine() {
     }
 
-    public void setCover(Cover cover) {
+    public int getNumber() {
+        return number;
+    }
 
-        this.cover = cover;
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     @Override
@@ -26,7 +25,6 @@ public class PaperBook extends Book implements PaperMedium {
 
     @Override
     public void setPageCount(int pageCount) {
-
         this.pageCount = pageCount;
     }
 
@@ -35,26 +33,23 @@ public class PaperBook extends Book implements PaperMedium {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        PaperBook paperBook = (PaperBook) o;
-        return pageCount == paperBook.pageCount &&
-                cover == paperBook.cover;
+        Magazine magazine = (Magazine) o;
+        return number == magazine.number &&
+                pageCount == magazine.pageCount;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), cover, pageCount);
+        return Objects.hash(super.hashCode(), number, pageCount);
     }
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("PaperBook{");
-        sb.append("author=").append(author);
+        final StringBuilder sb = new StringBuilder("Magazine{");
         sb.append(", title='").append(title);
-        sb.append(", cover=").append(cover);
+        sb.append("number=").append(number);
         sb.append(", pageCount=").append(pageCount).append('\'');
         sb.append('}');
         return sb.toString();
     }
-
-
 }

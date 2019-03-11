@@ -13,23 +13,26 @@ public class MultimediashopTest {
     public void shouldAddBookWhenListOfBooksExist(){
         //given
         Multimediashop multimediashop = new Multimediashop();
-        multimediashop.setBooks(new LinkedList<Book>());
-        Book book = new Book();
-        book.setTitle("W pustyni i w puszczy");
+        multimediashop.setMedia(new LinkedList<Book>());
+        Book book = new PaperBookBuilder()
+                .title("W pustyni i w puszczy")
+                .build();
         //when
-        multimediashop.addBook(book);
+        multimediashop.addMedium(book);
         //then
-        assertEquals(Arrays.asList(book),multimediashop.getBooks());
+        assertEquals(Arrays.asList(book),multimediashop.getMedia());
     }
 
     @Test
     public void shouldAddBookWhenListOfBookIsNull(){
         //given
         Multimediashop multimediashop = new Multimediashop();
-        Book book = new Book();
+        Book book = new PaperBookBuilder()
+                .title("W pustyni i w puszczy")
+                .build();
         //when
-        multimediashop.addBook(book);
+        multimediashop.addMedium(book);
         //then
-        assertEquals(Arrays.asList(book), multimediashop.getBooks());
+        assertEquals(Arrays.asList(book), multimediashop.getMedia());
     }
 }
